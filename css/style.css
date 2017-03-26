@@ -1,0 +1,23 @@
+/*style generalne dla obrazkow*/
+
+img {
+	max-height: 500px;
+	border: 3px solid red;
+	display: block;
+	margin-bottom: 200px;
+}
+
+
+/* konkretne style do obrazka truskawka*/
+
+/*właściwość transform - rotate - do obrotu obrazka*/
+
+#zdj1 {
+	transform: rotate(-20deg);
+}
+
+#zdj2 {
+	transform: translateX(200px);
+	transform: translateY(200px);
+	transform: translate(200px, 200px);
+}

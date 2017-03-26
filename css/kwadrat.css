@@ -1,0 +1,77 @@
+.square {
+	height: 400px;
+	width: 400px;
+	border: 2px solid black;
+	position: relative;
+}
+
+.inner-square {
+	height: 50px;
+	width: 50px;
+	background-color: blue;
+	position: absolute;
+	bottom: 0;
+}
+
+.inner-square {
+	animation-name: walk;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes walk {
+	0% {
+		transform: translate(0px, 0px);
+	}
+	
+	25% {
+		transform: translate(350px, 0px);
+	}
+	
+	50% {
+		transform: translate(350px, -350px);
+	}
+	
+	75% {
+		transform: translate(0px, -350px);
+	}
+	
+	100% {
+		transform: translate(0px, 0px);
+	}
+}
+
+
+/*rotacja kwadracika*
+
+@keyframes rotation {
+	0% {
+		bottom: 0;
+		left: 0;
+		transform: rotate(0deg);
+	}
+	
+	25% {
+		left: 350px;
+		bottom: 0;
+		transform: rotate(45deg);
+	}
+	
+	50% {
+		left: 350px;
+		bottom: 350px;
+		transform: rotate(90deg);
+	}
+	
+	75% {
+		left: 0;
+		bottom: 350px;
+		transform: rotate(135deg);
+	}
+	
+    100% {
+         bottom: 0;
+		
+
+}
+}

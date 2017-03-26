@@ -14,10 +14,80 @@ img {
 
 #zdj1 {
 	transform: rotate(-20deg);
+	transition: all .3s;
 }
+
+#zdj1:hover {
+	transform: rotate(20deg);
+}
+
+/*wlaściwość transform-translate do przesuwania obrazka*/
 
 #zdj2 {
 	transform: translateX(200px);
 	transform: translateY(200px);
 	transform: translate(200px, 200px);
+	transform: translate(200px, 200px) rotate(30deg) scale(.5); 
+	/* tak wyglada łączenie funkcji - bez przecinka, tylko spacja między funkcjami */
+}
+
+/*wlasciwosc transform-scale do skalowania obrazka*/
+
+#zdj3 {
+	transform: scaleX(2);
+	transform: scaleY(2);
+	transform: scale(2);
+	
+}
+
+/*ANIMACJE*/
+
+#zdj4 {
+	animation-name: stretch;
+	animation-duration: 3s;
+	width: 100%;
+}
+
+#zdj5 {
+	animation-name: second_stretch;
+	animation-duration: 10s;
+	width: 50%;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease;
+}
+
+/*animacja from to - od 0 do 100%; po @keyframes nadajemy nazwę naszej funkcji np. stretch i potem podajemy ta nazwe dla danego elementu jako animation-name*/
+
+@keyframes stretch {
+	from {
+		width: 100px;
+	}
+	
+	to {
+		width: 200px;
+	}
+}
+
+
+@keyframes stretch {
+	from {
+		width: 50%;
+	}
+	
+	to {
+		width: 100%;
+	}
+}
+
+/*animacja - z wartosciami procentowymi*/
+
+@keyframes second_stretch {
+	0%, 100% {
+		width: 50%;
+	}
+	
+	50% {
+		width: 100%;
+	}
+	
 }
